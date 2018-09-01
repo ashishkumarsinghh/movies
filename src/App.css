@@ -1,0 +1,52 @@
+.masthead {
+  background: rgba(23, 34, 12, 1);
+  color: white;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin-bottom: 1vh;
+}
+
+.masthead > h2 {
+  text-align: center;
+}
+.ssfbar {
+  display: grid;
+  justify-content: baseline;
+  grid-template-areas: "searchby sortby filterbylang filterbycountry";
+  padding-top: 5em;
+  padding-bottom: 5em;
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+}
+
+.filterbylang {
+  padding-top: 1em;
+  grid-area: filterbylang;
+}
+.filterbycountry {
+  padding-top: 1em;
+  grid-area: filterbycountry;
+}
+.sortby {
+  padding-top: 1em;
+  grid-area: sortby;
+}
+.searchby {
+  padding-top: 1em;
+  grid-area: searchby;
+}
+
+/* SMARTPHONES PORTRAIT */
+@media only screen and (min-width: 300px) {
+  .ssfbar {
+    grid-template-areas: "searchby" "sortby" "filterbylang" "filterbycountry";
+  }
+}
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 990px) {
+  .ssfbar {
+    grid-template-areas: "searchby sortby filterbylang filterbycountry";
+  }
+}
